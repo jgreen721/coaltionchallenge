@@ -53,3 +53,9 @@ footer {
     flex-direction: column;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .main-content {
+    padding: 0 2rem;
+  }
+}

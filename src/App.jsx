@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="app">
-      <AnimatedOverlay/>
+      {/* <AnimatedOverlay/> */}
       <Navbar/>
       <Header/>
       <div className="main-content">
