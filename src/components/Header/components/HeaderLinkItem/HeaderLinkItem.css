@@ -1,0 +1,128 @@
+.header-link-item {
+  /* border: 2px solid black; */
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  white-space: nowrap;
+}
+
+/* .header-link-text {
+  cursor: pointer;
+  position: relative;
+} */
+
+.header-link {
+  opacity: 0.7;
+}
+
+.header-link:hover {
+  opacity: 1;
+  text-shadow: 1px 0px 1px rgba(25, 35, 30, 0.65);
+}
+
+.highlight {
+  opacity: 1;
+  text-shadow: 1px 0px 1px rgba(25, 35, 30, 0.65);
+}
+
+.underline-link {
+  position: relative;
+}
+
+.underline-link::after {
+  position: absolute;
+  content: "";
+  bottom: -1rem;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--orange);
+  background: red;
+  transform-origin: center;
+  transform: scale(0);
+  transition: 0.25s ease;
+  animation: growline 0.25s forwards;
+}
+
+@keyframes growline {
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sub-menu {
+  position: absolute;
+  padding: 2rem;
+  border: 1px solid black;
+  transform-origin: top;
+  transition: 0.2s ease;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: white;
+  bottom: 0;
+  transition: 0.25s;
+  transform-origin: top;
+  white-space: nowrap;
+  transform: translateY(100%) scaleY(1);
+}
+
+.shrink-menu {
+  transform: translateY(100%) scaleY(0);
+}
+
+.sub-menu-link-item {
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.sub-link-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: white;
+  transform-origin: left;
+  padding: 1rem;
+  display: none;
+  border: 1px solid black;
+  z-index: 5;
+}
+
+.sub-link-menu-left {
+  transform-origin: right;
+  transform: translateX(-105%) translateY(-25%) scaleX(0);
+}
+
+.sub-link-menu-right {
+  transform-origin: left;
+  transform: translateX(105%) translateY(-25%) scaleX(0);
+}
+
+.show-sub-link-menu-left {
+  transition: 0.2s;
+  display: block;
+  animation: animatesubmenuleft 0.2s forwards;
+}
+
+@keyframes animatesubmenuleft {
+  100% {
+    transform: translateX(-100%) translateY(-25%) scaleX(1);
+  }
+}
+
+.show-sub-link-menu-right {
+  transition: 0.2s;
+  display: block;
+  animation: animatesubmenuright 0.2s forwards;
+}
+
+@keyframes animatesubmenuright {
+  100% {
+    transform: translateX(105%) translateY(-25%) scaleX(1);
+  }
+}
+
+.submenu-sublink-item {
+  margin: 1rem 0;
+}

@@ -1,0 +1,39 @@
+.media-links {
+  /* border: 2px solid black; */
+  display: flex;
+  gap: 1rem;
+}
+
+.media-link-item {
+  background: rgb(235, 225, 225);
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-link-item:hover {
+  background: rgb(25, 35, 35);
+}
+
+.media-link * {
+  font-size: 2rem;
+  color: white;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 750px) {
+  .hide {
+    display: none;
+  }
+
+  .media-links {
+    margin: 2rem 0;
+  }
+}

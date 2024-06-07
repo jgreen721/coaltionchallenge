@@ -1,0 +1,76 @@
+.animated-overlay-parent {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  z-index: 50;
+  pointer-events: none;
+}
+
+@keyframes blurfadeaway {
+  0% {
+    filter: blur(0px);
+  }
+  95% {
+    filter: blur(50px);
+  }
+  100% {
+    filter: blur(100px);
+    display: none;
+  }
+}
+
+.animated-overlay-parent::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(15px);
+  animation: blurfadeaway 1s 1.5s forwards;
+}
+
+.animated-overlay-parent::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: black;
+  opacity: 0.6;
+  animation: blurfadeaway 1s 1.5s forwards;
+}
+
+.animated-overlay-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 5;
+  height: 100vh;
+}
+
+.overlay-card {
+  position: relative;
+}
+
+.overlay-header-text {
+  font-size: 7rem;
+  animation: blurfadeaway 1s 1s forwards;
+}
+
+.overlay-header-one {
+  transform: translateX(-5rem);
+}
+.overlay-header-two {
+  transform: translateX(5rem);
+}
+
+@media screen and (max-width: 750px) {
+  .overlay-header-text {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .overlay-header-text {
+    font-size: 3rem;
+  }
+}

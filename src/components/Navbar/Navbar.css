@@ -1,0 +1,53 @@
+.navbar-parent {
+  background: var(--orange);
+  padding: 1rem 0rem;
+  position: relative;
+}
+.navbar-content {
+  max-width: 144rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  /* text-transform: uppercase; */
+  position: relative;
+  padding: 0 4rem;
+}
+
+.nav-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: var(--orange);
+  z-index: 5;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.text-white {
+  color: white;
+  position: relative;
+  z-index: 5;
+}
+
+.navbar-content-column {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.site-btn {
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.site-btn:hover {
+  color: white;
+  position: relative;
+  z-index: 5;
+}

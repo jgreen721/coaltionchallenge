@@ -1,0 +1,29 @@
+.header {
+  background: var(--lightgray);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+  .header-links {
+    display: none;
+  }
+
+  .header {
+    padding: 2rem 0;
+  }
+}

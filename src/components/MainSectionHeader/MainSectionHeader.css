@@ -1,0 +1,21 @@
+.site-path-text {
+  color: lightgray;
+}
+
+.current {
+  color: black;
+}
+
+.main-section-header-container {
+  padding: 4rem 0;
+}
+
+.contact-info-blurb {
+  /* margin-right: 17.5rem; */
+  margin-top: 4rem;
+  max-width: 1100px;
+}
+
+.contact-h3 {
+  margin: 1rem 0;
+}
